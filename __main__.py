@@ -1,5 +1,6 @@
 import os
 import pygame
+from gameListScreen import mainScene
 
 #def game_file(name):
 #    return (
@@ -42,8 +43,7 @@ def main():
                 raise SystemExit
             if event.type == pygame.MOUSEBUTTONDOWN: 
                 if width/2-50 <= mouse[0] <= width/2+50 and height/2-25 <= mouse[1] <= height/2+20: 
-                    #Make this go to game screen with a list of all games
-                    pygame.quit() 
+                    mainScene()
                   
             
         screen.fill(backgroundColor)
