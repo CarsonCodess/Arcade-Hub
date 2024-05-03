@@ -26,7 +26,8 @@ Please adhere to this project's `code of conduct`.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
-## Authors
+## Contributors
 
-- [@carsoncodess](https://www.github.com/carsoncodess)
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
 
