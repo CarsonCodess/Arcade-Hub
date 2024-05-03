@@ -33,6 +33,9 @@ def main():
     buttonTextRect.center = (width/2, height/2)
 
     while True:
+
+        mouse = pygame.mouse.get_pos()
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -45,8 +48,6 @@ def main():
             
         screen.fill(backgroundColor)
         screen.blit(titleText, titleTextRect)
-
-        mouse = pygame.mouse.get_pos()
 
         if width/2-50 <= mouse[0] <= width/2+50 and height/2-25 <= mouse[1] <= height/2+20: 
             buttonText = buttonFont.render('Play', True, 'black')
