@@ -8,6 +8,8 @@ An open source repository that you can add any games you would like to add so ev
 
 Contributions are always welcome!
 
+If you are adding a game, please add images/textures to it as well!
+
 See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
