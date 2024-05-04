@@ -1,6 +1,8 @@
 import os
 import pygame
-from gameListScreen import mainScene
+
+import gameListScreen
+import gameListScreen
 from Button import Button
 from Text import Text
 
@@ -22,6 +24,8 @@ def main():
     playButton = Button('Play', (width, height), 96)
     exitButton = Button('Exit', (width, height + 250), 96)
 
+    gameState = 0  # 0 Menu, 1 Game Select, 2 In Game
+
     while True:
         mouse = pygame.mouse.get_pos()
 
@@ -31,25 +35,27 @@ def main():
                 raise SystemExit
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if playButton.isInsideOf(mouse):
-                    mainScene()
+                    gameState = 1
                 if exitButton.isInsideOf(mouse):
                     pygame.quit()
 
         screen.fill(backgroundColor)
-        title.render(screen)
+        if (gameState == 0):
+            title.render(screen)
 
-        if playButton.isInsideOf(mouse):
-            playButton.setColor('black')
-        else:
-            playButton.setColor(textColor)
-        if exitButton.isInsideOf(mouse):
-            exitButton.setColor('black')
-        else:
-            exitButton.setColor(textColor)
+            if playButton.isInsideOf(mouse):
+                playButton.setColor('black')
+            else:
+                playButton.setColor(textColor)
+            if exitButton.isInsideOf(mouse):
+                exitButton.setColor('black')
+            else:
+                exitButton.setColor(textColor)
 
-        playButton.render(screen)
-        exitButton.render(screen)
-
+            playButton.render(screen)
+            exitButton.render(screen)
+        if (gameState == 1):
+            gameListScreen.render(clock)
         pygame.display.flip()
         clock.tick(60)
 

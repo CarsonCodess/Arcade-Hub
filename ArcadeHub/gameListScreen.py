@@ -5,31 +5,11 @@ from Text import Text
 #TO DO:
 #Add a modular button system that automatically adds buttons as games are added.
 
-def mainScene():
-    
-    pygame.init()
-
-    screen = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
-    clock = pygame.time.Clock()
-
-    backgroundColor = (32, 32, 32)
+def render(clock):
+    screen = pygame.display.get_surface()
 
     width = pygame.display.Info().current_w
     height = pygame.display.Info().current_h
 
-    header = Text('Games', (width, height / 3), 80)
-
-    while True:
-        mouse = pygame.mouse.get_pos()
-
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                raise SystemExit
-                  
-            
-        screen.fill(backgroundColor)
-        header.render(screen)
-
-        pygame.display.flip()
-        clock.tick(60)
+    header = Text('Games', (width, height / 7), 124)
+    header.render(screen)
