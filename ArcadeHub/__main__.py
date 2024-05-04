@@ -37,14 +37,16 @@ def main():
                 pygame.quit()
                 raise SystemExit
             if event.type == pygame.MOUSEBUTTONDOWN:
-                if playButton.isInsideOf(mouse):
-                    gameState = 1
-                if exitButton.isInsideOf(mouse):
-                    pygame.quit()
+                if gameState == 0:
+                    if playButton.isInsideOf(mouse):
+                        gameListScreen.start()
+                        gameState = 1
+                    if exitButton.isInsideOf(mouse):
+                        pygame.quit()
 
         screen.fill(backgroundColor)
 
-        if (gameState == 0):
+        if gameState == 0:
             title.render(screen)
 
             if playButton.isInsideOf(mouse):
@@ -55,11 +57,9 @@ def main():
                 exitButton.setColor('black')
             else:
                 exitButton.setColor(textColor)
-
-        playButton.render(screen, ticks)
-        exitButton.render(screen, ticks)
-
-        if(gameState == 1):
+            playButton.render(screen, ticks)
+            exitButton.render(screen, ticks)
+        if gameState == 1:
             gameListScreen.render(clock)
 
         pygame.display.flip()
