@@ -25,6 +25,8 @@ def main():
     while True:
         mouse = pygame.mouse.get_pos()
 
+        ticks = pygame.time.get_ticks()
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -47,8 +49,8 @@ def main():
         else:
             exitButton.setColor(textColor)
 
-        playButton.render(screen)
-        exitButton.render(screen)
+        playButton.render(screen, ticks)
+        exitButton.render(screen, ticks)
 
         pygame.display.flip()
         clock.tick(60)
