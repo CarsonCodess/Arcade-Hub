@@ -1,7 +1,11 @@
 import pygame
+import os
+
+#TO DO:
+#Add a modular button system that automatically adds buttons as games are added.
 
 def mainScene():
-    #Title Screen
+    
     pygame.init()
 
     screen = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
@@ -16,7 +20,7 @@ def mainScene():
     headerFont = pygame.font.Font('freesansbold.ttf', 80)
     headerText = headerFont.render('Games', True, textColor)
     headerTextRect = headerText.get_rect()
-    headerTextRect.center = (width/2, height/5)
+    headerTextRect.center = (width/2, height/6)
 
     while True:
 

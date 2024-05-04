@@ -3,14 +3,6 @@ import pygame
 from gameListScreen import mainScene
 from Button import Button
 
-
-# def game_file(name):
-#    return (
-#        name.endswith('.py')
-#        and not name.startswith('__')
-#        and name != 'utils.py'
-#    )
-
 def main():
     # Title Screen
     pygame.init()
@@ -27,7 +19,7 @@ def main():
     titleFont = pygame.font.Font('ThaleahFat.ttf', 124)
     titleText = titleFont.render('Arcade Hub', True, textColor)
     titleTextRect = titleText.get_rect()
-    titleTextRect.center = (width / 2, height / 7)
+    titleTextRect.center = (width/2, height/5)
 
     buttonFont = pygame.font.Font('ThaleahFat.ttf', 72)
 
