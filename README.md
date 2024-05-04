@@ -10,6 +10,8 @@ Contributions are always welcome!
 
 If you are adding a game, please add images/textures to it as well!
 
+HOW TO CONTRIBUTE: [Contribution Guide](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
+
 See `contributing.md` for ways to get started.
 
 Please adhere to this project's `code of conduct`.
