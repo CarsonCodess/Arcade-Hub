@@ -17,7 +17,7 @@ def mainScene():
     width = pygame.display.Info().current_w
     height = pygame.display.Info().current_h
 
-    headerFont = pygame.font.Font('freesansbold.ttf', 80)
+    headerFont = pygame.font.Font('.\\Fonts\\ThaleahFat.ttf', 80)
     headerText = headerFont.render('Games', True, textColor)
     headerTextRect = headerText.get_rect()
     headerTextRect.center = (width/2, height/6)
