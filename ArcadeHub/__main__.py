@@ -16,12 +16,12 @@ def main():
     width = pygame.display.Info().current_w
     height = pygame.display.Info().current_h
 
-    titleFont = pygame.font.Font('.\\Fonts\\ThaleahFat.ttf', 124)
+    titleFont = pygame.font.Font('Fonts\\ThaleahFat.ttf', 124)
     titleText = titleFont.render('Arcade Hub', True, textColor)
     titleTextRect = titleText.get_rect()
     titleTextRect.center = (width/2, height/5)
 
-    buttonFont = pygame.font.Font('.\\Fonts\\ThaleahFat.ttf', 72)
+    buttonFont = pygame.font.Font('Fonts\\ThaleahFat.ttf', 72)
 
     playButton = Button('Play', (width, height), buttonFont)
     exitButton = Button('Exit', (width, height + 175), buttonFont)
