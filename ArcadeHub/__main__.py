@@ -2,6 +2,7 @@ import os
 import pygame
 from gameListScreen import mainScene
 from Button import Button
+from Text import Text
 
 def main():
     # Title Screen
@@ -16,15 +17,10 @@ def main():
     width = pygame.display.Info().current_w
     height = pygame.display.Info().current_h
 
-    titleFont = pygame.font.Font('Fonts\\ThaleahFat.ttf', 124)
-    titleText = titleFont.render('Arcade Hub', True, textColor)
-    titleTextRect = titleText.get_rect()
-    titleTextRect.center = (width/2, height/5)
+    title = Text('Arcade Hub', (width, height / 4), 124)
 
-    buttonFont = pygame.font.Font('Fonts\\ThaleahFat.ttf', 72)
-
-    playButton = Button('Play', (width, height), buttonFont)
-    exitButton = Button('Exit', (width, height + 175), buttonFont)
+    playButton = Button('Play', (width, height), 96)
+    exitButton = Button('Exit', (width, height + 250), 96)
 
     while True:
         mouse = pygame.mouse.get_pos()
@@ -40,7 +36,7 @@ def main():
                     pygame.quit()
 
         screen.fill(backgroundColor)
-        screen.blit(titleText, titleTextRect)
+        title.render(screen)
 
         if playButton.isInsideOf(mouse):
             playButton.setColor('black')

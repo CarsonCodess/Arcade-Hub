@@ -1,6 +1,8 @@
+import pygame
+
 class Text:
-    def __init__(self, text, position, font):
-        self.font = font
+    def __init__(self, text, position, fontSize):
+        self.font = pygame.font.Font('Fonts\\ThaleahFat.ttf', fontSize)
         self.text = text
         self.pos = position
         self.color = (201, 201, 201)

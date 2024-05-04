@@ -17,8 +17,7 @@ def mainScene():
     width = pygame.display.Info().current_w
     height = pygame.display.Info().current_h
 
-    headerFont = pygame.font.Font('Fonts\\ThaleahFat.ttf', 80)
-    header = Text('Games', (width, height / 3), headerFont)
+    header = Text('Games', (width, height / 3), 80)
 
     while True:
         mouse = pygame.mouse.get_pos()

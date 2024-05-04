@@ -2,8 +2,8 @@ from typing import Tuple
 import pygame
 
 class Button:
-    def __init__(self, text: str, position: Tuple[int, int], font: pygame.font):
-        self.buttonFont = font
+    def __init__(self, text: str, position: Tuple[int, int], fontSize):
+        self.buttonFont = pygame.font.Font('Fonts\\ThaleahFat.ttf', fontSize)
         self.buttonPosition = position
         self.buttonText = text
         self.renderText = self.buttonFont.render(self.buttonText, True, (201, 201, 201))
