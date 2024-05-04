@@ -5,6 +5,7 @@ import gameListScreen
 import gameListScreen
 from Button import Button
 from Text import Text
+from mathlib import Sinwave
 
 def main():
     # Title Screen
@@ -19,8 +20,6 @@ def main():
     width = pygame.display.Info().current_w
     height = pygame.display.Info().current_h
 
-    title = Text('Arcade Hub', (width, height / 4), 124)
-
     playButton = Button('Play', (width, height), 96)
     exitButton = Button('Exit', (width, height + 250), 96)
 
@@ -30,6 +29,8 @@ def main():
         mouse = pygame.mouse.get_pos()
 
         ticks = pygame.time.get_ticks()
+
+        title = Text('Arcade Hub', (width, Sinwave(height/2.5, 15, ticks)), 124)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -42,6 +43,7 @@ def main():
                     pygame.quit()
 
         screen.fill(backgroundColor)
+
         if (gameState == 0):
             title.render(screen)
 
@@ -56,6 +58,7 @@ def main():
 
         playButton.render(screen, ticks)
         exitButton.render(screen, ticks)
+
         if(gameState == 1):
             gameListScreen.render(clock)
 

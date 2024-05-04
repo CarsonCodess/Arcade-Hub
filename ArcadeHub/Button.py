@@ -1,4 +1,5 @@
 from typing import Tuple
+from mathlib import Sinwave
 import pygame
 import math
 
@@ -13,10 +14,8 @@ class Button:
         self.color = (201, 201, 201)
 
     def render(self, surface, time):
-        sinTime = math.sin((time / 400) * 2 / math.pi) * (self.buttonPosition[1] / 40)
-        y = self.buttonPosition[1] / 2 + sinTime
         self.renderText = self.buttonFont.render(self.buttonText, True, self.color)
-        self.rect = self.renderText.get_rect(center=(self.buttonPosition[0] / 2, y))
+        self.rect = self.renderText.get_rect(center=(self.buttonPosition[0] / 2, Sinwave(self.buttonPosition[1], 55, time)))
         surface.blit(self.renderText, self.rect)
 
     def setColor(self, col):
