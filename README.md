@@ -41,13 +41,6 @@ Please adhere to this project's `code of conduct`.
                     <sub><b>CarsonCodes</b></sub>
                 </a>
             </td>
-            <td align="center">
-                <a href="https://github.com/Imated">
-                    <img src="https://avatars.githubusercontent.com/u/70659385?v=4" width="100;" alt="Imated"/>
-                    <br />
-                    <sub><b>Imated</b></sub>
-                </a>
-            </td>
 		</tr>
 	<tbody>
 </table>
