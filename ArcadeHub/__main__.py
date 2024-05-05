@@ -43,6 +43,8 @@ def main():
                         gameState = 1
                     if exitButton.isInsideOf(mouse):
                         pygame.quit()
+                if gameState == 1:
+                    gameListScreen.onClick()
 
         screen.fill(backgroundColor)
 
@@ -65,6 +67,9 @@ def main():
         pygame.display.flip()
         clock.tick(60)
 
+def onInGame():
+    global gameState
+    gameState = 2
 
 if __name__ == "__main__":
     main()

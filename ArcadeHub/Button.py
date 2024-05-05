@@ -5,7 +5,7 @@ import math
 
 class Button:
 
-    def __init__(self, text: str, position: Tuple[int, int], fontSize):
+    def __init__(self, text: str, position: Tuple[int, int], fontSize: int):
         self.buttonFont = pygame.font.Font('Fonts\\ThaleahFat.ttf', fontSize)
         self.buttonPosition = position
         self.buttonText = text
