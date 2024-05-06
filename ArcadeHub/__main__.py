@@ -2,7 +2,6 @@ import os
 import pygame
 
 import gameListScreen
-import gameListScreen
 from Button import Button
 from Text import Text
 from mathlib import Sinwave
@@ -62,7 +61,7 @@ def main():
             playButton.render(screen, ticks)
             exitButton.render(screen, ticks)
         if gameState == 1:
-            gameListScreen.render(clock)
+            gameListScreen.render()
 
         pygame.display.flip()
         clock.tick(60)

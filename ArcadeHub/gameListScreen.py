@@ -46,7 +46,7 @@ def start():
 currentGame = None
 
 
-def render(clock):
+def render():
     screen = pygame.display.get_surface()
 
     width = pygame.display.Info().current_w
